@@ -1,5 +1,5 @@
 var koa = require('koa');
-var app = koa();
+var app = new koa();
 
 app.use(function *(){
 	this.set('Connection', 'close');

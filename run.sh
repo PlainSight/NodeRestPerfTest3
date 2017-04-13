@@ -1,48 +1,32 @@
-apt-get install apache2-utils
-apt-get install npm
-npm install n -g
-n latest
-npm install hapi
-npm install express
-npm install restify
-npm install koa
-npm install koa2
-npm install n
-npm install total.js
-npm install adonis-cli -g
-adonis new yardstick
-npm install sails -g
-sails new test-project
-
 echo express >> results.txt ;
 node expressserver.js & sleep 5 ; 
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:8000/ | grep "Requests per second:" >> results.txt ;
 pkill -f expressserver ;
-sleep 5 ;
+sleep 5 
 
 echo hapi >> results.txt ;
 node hapiserver.js & sleep 5 ;
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:8000/ | grep "Requests per second:" >> results.txt ;
 pkill -f hapiserver ;
-sleep 5 ;
+sleep 5 
 
 echo node >> results.txt ;
 node rawnodeserver.js & sleep 5 ; 
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:8000/ | grep "Requests per second:" >> results.txt ;
 pkill -f rawnodeserver ;
-sleep 5 ;
+sleep 5 
 
 echo restify >> results.txt ;
 node restifyserver.js & sleep 5 ; 
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:8000/ | grep "Requests per second:" >> results.txt ;
 pkill -f restifyserver ;
-sleep 5 ;
+sleep 5 
 
 echo koa2 >> results.txt ;
 node koa2server.js & sleep 5 ; 
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:8000/ | grep "Requests per second:" >> results.txt ;
 pkill -f koa2server ;
-sleep 5 ;
+sleep 5 
 
 
 echo total.js >> results.txt ;
@@ -57,12 +41,12 @@ sails lift & sleep 5 ;
 cd ..; 
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:1337/ | grep "Requests per second:" >> results.txt ;
 pkill -f sails ;
-sleep 5 ;
+sleep 5 
 
 echo adonis.js >> results.txt ;
 cd yardstick ;
-sails lift & sleep 5 ;
+npm start run & sleep 5 ;
 cd ..; 
 ab -k -n 50000 -c 100 -t 20 http://127.0.0.1:3333/ | grep "Requests per second:" >> results.txt ;
 pkill -f server.js ;
-sleep 5 ;
+sleep 5 

@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-	res.set('Connection', 'close');
+  res.set('Connection', 'close');
   res.send('Hello World!');
 });
 

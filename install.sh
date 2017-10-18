@@ -7,6 +7,7 @@ npm install express
 npm install restify
 npm install koa
 npm install koa2
+npm install fastify
 npm install n
 npm install total.js
 npm install adonis-cli -g

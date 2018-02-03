@@ -2,6 +2,7 @@ apt-get install apache2-utils
 apt-get install npm
 npm install n -g
 n latest
+npm install restocat
 npm install hapi
 npm install express
 npm install restify

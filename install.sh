@@ -11,6 +11,9 @@ npm install n
 npm install total.js
 npm install adonis-cli -g
 adonis new yardstick
+cd ./yardstick
+npm install
+cd ..
 cp yardstick-changes/app/Http/kernel.js yardstick/app/Http/kernel.js
 cp yardstick-changes/app/Http/routes.js yardstick/app/Http/routes.js
 npm install sails -g

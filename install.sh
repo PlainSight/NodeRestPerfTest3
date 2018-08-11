@@ -1,5 +1,5 @@
-apt-get install apache2-utils
-apt-get install npm
+apt-get install apache2-utils -y
+apt-get install npm -y
 npm install n -g
 n latest
 npm install hapi
@@ -14,6 +14,6 @@ adonis new yardstick
 cp yardstick-changes/app/Http/kernel.js yardstick/app/Http/kernel.js
 cp yardstick-changes/app/Http/routes.js yardstick/app/Http/routes.js
 npm install sails -g
-sails new test-project
+sails new test-project --minimal
 cp test-project-changes/api/controllers/ApiController.js test-project/api/controllers/ApiController.js
 cp test-project-changes/config/routes.js test-project/config/routes.js
